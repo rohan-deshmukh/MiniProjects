@@ -1,0 +1,52 @@
+
+{% extends "/var/www/FlaskApp/FlaskApp/templates/header.html" %}
+{% block body %}
+
+<body class = "body>
+
+	<div class="container" align="left" style="max-width:800px">
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" aria-valuenow="{{completed_percentages[Web Dev]}}" 			aria-valuemin="0" aria-valuemax="100" style="width: {{completed_percentages[Web Dev]}}%;">
+				Web Dev Progress: {{completed_percentages[Web Dev]}}%
+			</div>
+		</div>
+		<h2>{{curTitle}}</h2>
+		<br>
+
+		<div class="embed-responsive embed-responsive-16by9"></div>
+
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+
+		<kbd data-toggle="collapse" data-target="#consoleinfo" aria-expanded="false" 		aria-controls="consoleinfo">console</kbd>
+
+			<div class="collapse" id="consoleinfo">
+				<div class="well>
+					<p>When someone refers to "the console," they are referring to where information from
+					your program is output. You will see an example of "output to console" below. If you 
+					want this message to go away, just click again on the "console" button that you 
+					originally clicked on.</p>
+				</div>
+			</div>
+
+			<div class="row">
+			<div class="col-md-6">
+			<pre class="prettyprint">
+CODE HERE
+			</pre>
+			</div>
+			<div class="col-md-6">
+			<p>Explanation</p>
+			</div>
+			</div>
+
+			<p>The next tutorial: <a title="{{nextTitle}}" href="{{nextLink}}?completed={{curLink}}">
+			<button class="btn btn-primary">{{nextTitle}}</button></a></p>
+	</div>
+
+</body>
+
+{% endblock %}
+
